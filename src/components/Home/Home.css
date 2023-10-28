@@ -1,0 +1,72 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  background: #31423b;
+  padding: 20px;
+  margin-top: 60px;
+  margin-bottom: 150px;
+}
+
+.home-links {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -10rem;
+}
+
+.home-links ul {
+  display: block;
+}
+
+.home-links li {
+  list-style-type: none;
+  padding-top: 1.5rem;
+}
+
+.home-links li a {
+  color: white;
+  width: 100%;
+  font-size: 4rem;
+}
+
+.home-links li a:hover {
+  color: #131a17;
+}
+
+.home-message {
+  color: white;
+  font-size: 1cm;
+  margin-top: -15cm;
+  font-family: "Courier New", Courier, monospace;
+  position: absolute;
+  top: 50%;
+}
+
+.img {
+  border-radius: 50%;
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: 1.5cm;
+  width: 30%;
+  box-shadow: 9px 9px 1px 1px rgba(12, 31, 12, 0.2), -0.5em 0 0.9em #456256;
+}
+
+@media screen and (max-width: 900px) {
+  .home-links li a {
+    font-size: 2rem;
+    margin-left: -1cm;
+  }
+  .home-message {
+    position: absolute;
+    top: 50%;
+  }
+  .home {
+    min-height: 80vh;
+    margin-bottom: 100px;
+    margin-top: 45px;
+  }
+  .img {
+    width: 40%;
+  }
+}

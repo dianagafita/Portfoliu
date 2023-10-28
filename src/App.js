@@ -1,13 +1,14 @@
-import About from "./components/About";
-import Contact from "./components/Contact";
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
 import Header from "./components/Header/Header";
-import Home from "./components/Home";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
+import Home from "./components/Home/Home";
+import Projects from "./components/Projects/Projects";
+import Skills from "./components/Skills/Skills";
+import "./App.css";
 
-function App() {
+export default function App() {
   return (
-    <>
+    <div className="app">
       <Header />
       <main>
         <Home />
@@ -16,7 +17,6 @@ function App() {
         <Projects />
         <Contact />
       </main>
-    </>
+    </div>
   );
 }
-export default App;

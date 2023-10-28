@@ -1,10 +1,15 @@
 import Icon from "./Icon";
+import { motion } from "framer-motion";
 
-function NavButton(props) {
+export default function NavButton(props) {
   return (
-    <button className="hamburger" onClick={props.navHandler}>
+    <motion.button
+      whileHover={{ scale: 1.2 }}
+      transition={{ type: "spring", stiffness: 500 }}
+      className="hamburger"
+      onClick={props.navHandler}
+    >
       <Icon />
-    </button>
+    </motion.button>
   );
 }
-export default NavButton;

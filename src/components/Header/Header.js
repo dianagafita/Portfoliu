@@ -1,7 +1,8 @@
-import { useState } from "react";
 import "./Header.css";
-import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import ListOfContents from "./ListOfContents";
+import ListOfContentsIcons from "./ListOfContentsIcons";
 import NavButton from "./NavButton";
 
 export default function Navbar() {
@@ -10,14 +11,20 @@ export default function Navbar() {
   const hideNav = () => {
     setIsNavExpanded(false);
   };
+  // const navHandler = () => {
+  //   //setIsNavExpanded(!isNavExpanded);
+  //   setIsNavExpanded(!isNavExpanded);
+  //   console.log("a");
+  // };
+
   const navHandler = () => {
-    setIsNavExpanded(!isNavExpanded);
+    setIsNavExpanded((prevState) => !prevState);
   };
 
   return (
     <header className="header">
       <nav className="navigation">
-        <a href="/" className="brand-name"></a>
+        <a href="/" className="brand-name" />
 
         <NavButton navHandler={navHandler} />
 
@@ -27,18 +34,16 @@ export default function Navbar() {
           </div>
         )}
 
-        <AnimatePresence>
-          {isNavExpanded && (
-            <motion.div
-              initial={{ x: 0, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: 0, opacity: 0 }}
-              className="navigation-menu expanded"
-            >
-              <ListOfContents hideNav={hideNav} />
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {isNavExpanded && (
+          <motion.div
+            initial={{ x: 0, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: 0, opacity: 0 }}
+            className="navigation-menu expanded"
+          >
+            <ListOfContentsIcons hideNav={hideNav} />
+          </motion.div>
+        )}
       </nav>
     </header>
   );
