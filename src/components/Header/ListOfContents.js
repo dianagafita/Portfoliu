@@ -1,6 +1,14 @@
+import "./Header.css";
+import {
+  FaPhone,
+  FaHome,
+  FaListAlt,
+  FaUserCircle,
+  FaWindowRestore,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 
-export default function ListOfContents(props) {
+export default function ListOfContents() {
   const listVariants = {
     visible: { transition: { staggerChildren: 0.1 } },
   };
@@ -17,61 +25,98 @@ export default function ListOfContents(props) {
       },
     },
   };
-
   return (
-    <div>
-      <div>
-        <a href="#" />
-      </div>
-      <div>
-        <motion.ul variants={listVariants} initial="hidden" animate="visible">
-          <motion.li variants={itemVariants} onClick={props.hideNav}>
-            <motion.a
-              whileHover={{ scale: 1.2 }}
-              transition={{ type: "spring", stiffness: 500 }}
-              href="#home"
-            >
+    <div className="nav_menu" id="nav-menu">
+      <motion.ul
+        variants={listVariants}
+        initial="hidden"
+        animate="visible"
+        className="nav_list"
+        id="navlist"
+      >
+        <motion.li className="nav_item" variants={itemVariants}>
+          <motion.div whileHover={{ scale: 1.2 }}>
+            <a href="#home" className="nav_link active">
+              <FaHome style={{ marginRight: "20px" }} />
               Home
-            </motion.a>
-          </motion.li>
-          <motion.li variants={itemVariants} onClick={props.hideNav}>
-            <motion.a
-              whileHover={{ scale: 1 }}
-              transition={{ type: "spring", stiffness: 500 }}
-              href="#about"
-            >
+            </a>
+          </motion.div>
+        </motion.li>
+        <motion.li className="nav_item" variants={itemVariants}>
+          <motion.div whileHover={{ scale: 1.2 }}>
+            <a href="#about" className="nav_link">
+              <FaUserCircle style={{ marginRight: "20px" }} />
               About
-            </motion.a>
-          </motion.li>
-          <motion.li variants={itemVariants} onClick={props.hideNav}>
-            <motion.a
-              whileHover={{ scale: 1.2 }}
-              transition={{ type: "spring", stiffness: 500 }}
-              href="#skills"
-            >
+            </a>{" "}
+          </motion.div>
+        </motion.li>
+        <motion.li className="nav_item" variants={itemVariants}>
+          <motion.div whileHover={{ scale: 1.2 }}>
+            <a href="#skills" className="nav_link">
+              <FaListAlt style={{ marginRight: "23px" }} />
               Skills
-            </motion.a>
-          </motion.li>
-          <motion.li variants={itemVariants} onClick={props.hideNav}>
-            <motion.a
-              whileHover={{ scale: 1.2 }}
-              transition={{ type: "spring", stiffness: 500 }}
-              href="#projects"
-            >
+            </a>{" "}
+          </motion.div>
+        </motion.li>
+        <motion.li className="nav_item" variants={itemVariants}>
+          <motion.div whileHover={{ scale: 1.2 }}>
+            <a href="#work" className="nav_link">
+              <FaWindowRestore style={{ marginRight: "5px" }} />
               Projects
-            </motion.a>
-          </motion.li>
-          <motion.li variants={itemVariants} onClick={props.hideNav}>
-            <motion.a
-              whileHover={{ scale: 1.2 }}
-              transition={{ type: "spring", stiffness: 500 }}
-              href="#contact"
-            >
+            </a>{" "}
+          </motion.div>
+        </motion.li>
+        <motion.li className="nav_item" variants={itemVariants}>
+          <motion.div whileHover={{ scale: 1.2 }}>
+            <a href="#contact" className="nav_link">
+              <FaPhone style={{ marginRight: "7px" }} />
               Contact
-            </motion.a>
-          </motion.li>
-        </motion.ul>
-      </div>
+            </a>{" "}
+          </motion.div>
+        </motion.li>
+      </motion.ul>
     </div>
+
+    // return (
+    //   <div className="nav_menu" id="nav-menu">
+    //     <motion.ul
+    //       variants={listVariants}
+    //       initial="hidden"
+    //       animate="visible"
+    //       className="nav_list"
+    //       id="navlist"
+    //     >
+    //       <motion.li className="nav_item" variants={itemVariants}>
+    //         <a
+    //           href="#home"
+    //           whileHover={{ scale: 1.2 }}
+    //           transition={{ type: "spring", stiffness: 500 }}
+    //           className="nav_link active"
+    //         >
+    //           Home
+    //         </a>
+    //       </motion.li>
+    //       <motion.li className="nav_item">
+    //         <a href="#about" className="nav_link">
+    //           About
+    //         </a>
+    //       </motion.li>
+    //       <motion.li className="nav_item">
+    //         <a href="#skills" className="nav_link">
+    //           Skills
+    //         </a>
+    //       </motion.li>
+    //       <motion.li className="nav_item">
+    //         <a href="#work" className="nav_link">
+    //           Projects
+    //         </a>
+    //       </motion.li>
+    //       <motion.li className="nav_item">
+    //         <a href="#contact" className="nav_link">
+    //           Contact
+    //         </a>
+    //       </motion.li>
+    //     </motion.ul>
+    //   </div>
   );
 }

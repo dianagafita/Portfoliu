@@ -5,7 +5,7 @@ import Home from "./components/Home/Home";
 import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
 import "./App.css";
-
+import { motion } from "framer-motion";
 export default function App() {
   return (
     <div className="app">
@@ -13,9 +13,9 @@ export default function App() {
       <main>
         <Home />
         <About />
-        <Skills />
+        {/* <Skills />
         <Projects />
-        <Contact />
+        <Contact /> */}
       </main>
     </div>
   );

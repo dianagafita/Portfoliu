@@ -1,7 +1,9 @@
 .about {
   background: #31423b;
-  padding: 20px;
-  margin-top: -10px;
-  margin-bottom: 20px;
-  height: 35cm;
+  height: calc(100vh - 3rem);
+  row-gap: 1rem;
+}
+.title h2 {
+  font-size: 3rem;
+  text-align: center;
 }

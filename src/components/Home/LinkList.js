@@ -1,5 +1,6 @@
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
+import "./Home.css";
 
 export default function LinkList() {
   const listVariants = {
