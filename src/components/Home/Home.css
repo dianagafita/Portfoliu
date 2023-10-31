@@ -10,10 +10,10 @@
 }
 
 .home-links {
-  position: absolute;
-  padding-top: 10cm;
   margin-left: 0;
   padding-left: 0;
+  position: absolute;
+  bottom: 5%;
 }
 
 .home-links ul {
@@ -28,7 +28,7 @@
 .home-links li a {
   color: white;
   width: 100%;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .home-links li a:hover {
   color: #131a17;
@@ -36,9 +36,17 @@
 
 .home-message {
   color: white;
-  font-size: 1cm;
+  font-size: 250%;
   font-family: "Courier New", Courier, monospace;
   position: absolute;
+  bottom: 60%;
+}
+.home-message h1 {
+  color: #8bc3ab;
+  font-size: 100%;
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
+  left: 20%;
 }
 
 .img {
@@ -47,16 +55,27 @@
   margin-top: 50px;
   margin-left: auto;
   margin-right: 1.5cm;
-  width: 40%;
+  width: 30%;
   box-shadow: 9px 9px 1px 1px rgba(12, 31, 12, 0.2), -0.5em 0 0.9em #456256;
 }
 
 @media screen and (max-width: 900px) {
   .home-links li a {
-    font-size: 2rem;
+    font-size: 0.6cm;
   }
   .home-message {
+    color: white;
+    font-size: 200%;
+    font-family: "Courier New", Courier, monospace;
     position: absolute;
+    bottom: 70%;
+  }
+  .home-message h1 {
+    color: #8bc3ab;
+    font-size: 100%;
+    font-family: "Courier New", Courier, monospace;
+    position: relative;
+    left: 20%;
   }
   .home {
     min-height: 80vh;

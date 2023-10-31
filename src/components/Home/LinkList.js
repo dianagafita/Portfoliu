@@ -2,7 +2,7 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 import "./Home.css";
 
-export default function LinkList() {
+export default function LinkList(props) {
   const listVariants = {
     visible: { transition: { staggerChildren: 0.1 } },
   };
@@ -19,28 +19,36 @@ export default function LinkList() {
       },
     },
   };
+
   return (
-    <div className="home-links">
-      <motion.ul variants={listVariants} initial="hidden" animate="visible">
-        <motion.li variants={itemVariants}>
-          <motion.a
-            whileHover={{ scale: 1.2 }}
-            transition={{ type: "spring", stiffness: 500 }}
-            href="https://www.linkedin.com/in/gafita-diana-b478ab239/"
-          >
+    <motion.div className="home-links">
+      <motion.ul
+        initial={{ opacity: 0, scale: 1 }}
+        animate={{ opacity: 1, scale: 1.5 }}
+        transition={{
+          type: "spring",
+          damping: 10,
+          stiffness: 200,
+        }}
+      >
+        <motion.li
+          whileHover={{ scale: 1.2, rotate: 20 }}
+          whileTap={{ scale: 0.8 }}
+        >
+          <motion.a href="https://www.linkedin.com/in/gafita-diana-b478ab239/">
             <FaLinkedinIn />
           </motion.a>
         </motion.li>
-        <motion.li variants={itemVariants}>
-          <motion.a
-            whileHover={{ scale: 1.2 }}
-            transition={{ type: "spring", stiffness: 500 }}
-            href="https://github.com/dianagafita"
-          >
+
+        <motion.li
+          whileHover={{ scale: 1.2, rotate: 20 }}
+          whileTap={{ scale: 0.8 }}
+        >
+          <motion.a href="https://github.com/dianagafita">
             <FaGithub />
           </motion.a>
         </motion.li>
       </motion.ul>
-    </div>
+    </motion.div>
   );
 }

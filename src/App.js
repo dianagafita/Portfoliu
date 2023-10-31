@@ -13,9 +13,9 @@ export default function App() {
       <main>
         <Home />
         <About />
-        {/* <Skills />
-        <Projects />
-        <Contact /> */}
+        <Skills />
+        {/* <Projects />
+        <Contact />  */}
       </main>
     </div>
   );

@@ -35,15 +35,15 @@ export default function ListOfContents() {
         id="navlist"
       >
         <motion.li className="nav_item" variants={itemVariants}>
-          <motion.div whileHover={{ scale: 1.2 }}>
-            <a href="#home" className="nav_link active">
+          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1 }}>
+            <a href="#" className="nav_link active">
               <FaHome style={{ marginRight: "20px" }} />
               Home
             </a>
           </motion.div>
         </motion.li>
         <motion.li className="nav_item" variants={itemVariants}>
-          <motion.div whileHover={{ scale: 1.2 }}>
+          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1 }}>
             <a href="#about" className="nav_link">
               <FaUserCircle style={{ marginRight: "20px" }} />
               About
@@ -51,7 +51,7 @@ export default function ListOfContents() {
           </motion.div>
         </motion.li>
         <motion.li className="nav_item" variants={itemVariants}>
-          <motion.div whileHover={{ scale: 1.2 }}>
+          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1 }}>
             <a href="#skills" className="nav_link">
               <FaListAlt style={{ marginRight: "23px" }} />
               Skills
@@ -59,7 +59,7 @@ export default function ListOfContents() {
           </motion.div>
         </motion.li>
         <motion.li className="nav_item" variants={itemVariants}>
-          <motion.div whileHover={{ scale: 1.2 }}>
+          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1 }}>
             <a href="#work" className="nav_link">
               <FaWindowRestore style={{ marginRight: "5px" }} />
               Projects
@@ -67,11 +67,11 @@ export default function ListOfContents() {
           </motion.div>
         </motion.li>
         <motion.li className="nav_item" variants={itemVariants}>
-          <motion.div whileHover={{ scale: 1.2 }}>
+          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 1 }}>
             <a href="#contact" className="nav_link">
               <FaPhone style={{ marginRight: "7px" }} />
               Contact
-            </a>{" "}
+            </a>
           </motion.div>
         </motion.li>
       </motion.ul>

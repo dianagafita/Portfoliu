@@ -1,0 +1,11 @@
+.skills {
+  background: #31423b;
+  height: calc(100vh - 5rem);
+  row-gap: 1rem;
+}
+
+.title h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: #131a17;
+}
