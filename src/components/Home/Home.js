@@ -22,37 +22,6 @@ const Home = () => {
       },
     },
   };
-  useEffect(() => {
-    const sr = ScrollReveal({
-      origin: "top",
-      distance: "40px",
-      duration: 3000,
-      reset: true,
-    });
-
-    sr.reveal(".message", {
-      delay: 1000,
-      scale: 1.5,
-      beforeReveal: () => {
-        document.querySelector(".message").style.opacity = 1;
-        document.querySelector(".message").style.transform = "scale(1)";
-      },
-    });
-
-    sr.reveal(".home-links", {
-      interval: 200,
-      beforeReveal: (el) => {
-        el.style.transition = "transform 0.5s ease, opacity 0.5s ease";
-
-        el.style.transform = "scale(1.3)";
-        el.style.opacity = 1;
-        setTimeout(() => {
-          el.style.opacity = 1;
-          el.style.transform = "scale(1.5)";
-        }, 300);
-      },
-    });
-  }, []);
 
   return (
     <section id="home" className="home">
