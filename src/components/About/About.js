@@ -79,6 +79,7 @@ export default function About() {
                 borderRadius={10}
                 centerContent
                 padding={10}
+                width="100%"
               >
                 Education
               </Container>

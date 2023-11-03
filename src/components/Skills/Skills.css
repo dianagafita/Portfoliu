@@ -25,5 +25,14 @@
   display: none;
   right: 0;
   background-color: white;
-  color: black;
+}
+
+.show_details h1 {
+  color: #000;
+  margin-left: 50;
+  margin-right: 20cm;
+}
+
+.skillDisplay {
+  margin-left: 1cm;
 }

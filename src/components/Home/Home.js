@@ -25,25 +25,23 @@ const Home = () => {
 
   return (
     <section id="home" className="home">
-      <motion.div>
-        <motion.img
-          id="image"
-          whileHover={{ scale: 1.1 }}
-          transition={{ type: "spring", stiffness: 500 }}
-          variants={imgVariants}
-          initial="hidden"
-          animate="visible"
-          style={{ opacity: opacity, y: y }}
-          className="img"
-          src={img}
-          alt="image"
-        />
-      </motion.div>
       <div className="home-message" id="message">
         <h2>Hello,</h2>
         <h1> I'm Diana.</h1>
       </div>
       <LinkList />
+      <motion.img
+        id="image"
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 500 }}
+        variants={imgVariants}
+        initial="hidden"
+        animate="visible"
+        style={{ opacity: opacity, y: y }}
+        className="img"
+        src={img}
+        alt="image"
+      />
     </section>
   );
 };

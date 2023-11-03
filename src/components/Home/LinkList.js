@@ -26,15 +26,6 @@ export default function LinkList(props) {
 
   return (
     <motion.div className="home-links">
-      {/* <motion.ul
-      // initial={{ opacity: 0, scale: 1 }}
-      // animate={{ opacity: 1, scale: 1.5 }}
-      // transition={{
-      //   type: "spring",
-      //   damping: 10,
-      //   stiffness: 200,
-      // }}
-      > */}
       {linkList.map((link, index) => (
         <motion.li
           key={index}
@@ -45,7 +36,6 @@ export default function LinkList(props) {
           <motion.a href={link.href}>{React.createElement(link.icon)}</motion.a>
         </motion.li>
       ))}
-      {/* </motion.ul> */}
     </motion.div>
   );
 }
