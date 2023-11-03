@@ -38,12 +38,12 @@ const Home = () => {
           src={img}
           alt="image"
         />
-        <div className="home-message" id="message">
-          <h2>Hello,</h2>
-          <h1> I'm Diana.</h1>
-        </div>
-        <LinkList />
       </motion.div>
+      <div className="home-message" id="message">
+        <h2>Hello,</h2>
+        <h1> I'm Diana.</h1>
+      </div>
+      <LinkList />
     </section>
   );
 };

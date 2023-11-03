@@ -1,6 +1,12 @@
 .projects {
+  display: flex;
+  flex-direction: column;
   background: #31423b;
-  height: calc(100vh - 5rem);
+  padding: 20px;
+  margin-top: 60px;
+  margin-bottom: 150px;
+  height: calc(100vh - 3rem);
+  row-gap: 1rem;
 }
 .title h2 {
   font-size: 3rem;

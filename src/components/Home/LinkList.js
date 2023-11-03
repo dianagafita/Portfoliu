@@ -1,12 +1,8 @@
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 import "./Home.css";
-
+import React from "react";
 export default function LinkList(props) {
-  const listVariants = {
-    visible: { transition: { staggerChildren: 0.1 } },
-  };
-
   const itemVariants = {
     hidden: { opacity: 0, scale: 0.5 },
     visible: {
@@ -20,35 +16,36 @@ export default function LinkList(props) {
     },
   };
 
+  const linkList = [
+    {
+      href: "https://www.linkedin.com/in/gafita-diana-b478ab239/",
+      icon: FaLinkedinIn,
+    },
+    { href: "https://github.com/dianagafita", icon: FaGithub },
+  ];
+
   return (
     <motion.div className="home-links">
-      <motion.ul
-        initial={{ opacity: 0, scale: 1 }}
-        animate={{ opacity: 1, scale: 1.5 }}
-        transition={{
-          type: "spring",
-          damping: 10,
-          stiffness: 200,
-        }}
-      >
+      {/* <motion.ul
+      // initial={{ opacity: 0, scale: 1 }}
+      // animate={{ opacity: 1, scale: 1.5 }}
+      // transition={{
+      //   type: "spring",
+      //   damping: 10,
+      //   stiffness: 200,
+      // }}
+      > */}
+      {linkList.map((link, index) => (
         <motion.li
+          key={index}
+          variants={itemVariants}
           whileHover={{ scale: 1.2, rotate: 20 }}
           whileTap={{ scale: 0.8 }}
         >
-          <motion.a href="https://www.linkedin.com/in/gafita-diana-b478ab239/">
-            <FaLinkedinIn />
-          </motion.a>
+          <motion.a href={link.href}>{React.createElement(link.icon)}</motion.a>
         </motion.li>
-
-        <motion.li
-          whileHover={{ scale: 1.2, rotate: 20 }}
-          whileTap={{ scale: 0.8 }}
-        >
-          <motion.a href="https://github.com/dianagafita">
-            <FaGithub />
-          </motion.a>
-        </motion.li>
-      </motion.ul>
+      ))}
+      {/* </motion.ul> */}
     </motion.div>
   );
 }

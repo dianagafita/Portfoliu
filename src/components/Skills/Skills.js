@@ -35,7 +35,7 @@ export default function Skills() {
   }, []);
 
   return (
-    <section className="skills" id="#skills">
+    <section className="skills" id="skills">
       <div className="title">
         <h2>SKILLS</h2>
       </div>
