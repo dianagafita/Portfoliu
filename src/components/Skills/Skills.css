@@ -1,0 +1,38 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  background: #31423b;
+  padding: 20px;
+  margin-top: 60px;
+  margin-bottom: 150px;
+  height: calc(60vh - 3rem);
+  row-gap: 1rem;
+}
+
+.title h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: #131a17;
+  margin-bottom: 4cm;
+}
+
+.skill {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.show_details {
+  display: none;
+  right: 0;
+  background-color: white;
+}
+
+.show_details h1 {
+  color: #000;
+  margin-left: 50;
+  margin-right: 20cm;
+}
+
+.skillDisplay {
+  margin-left: 1cm;
+}

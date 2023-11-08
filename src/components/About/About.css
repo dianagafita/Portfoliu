@@ -1,0 +1,125 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  background: #31423b;
+  padding: 20px;
+  margin-top: 60px;
+  margin-bottom: 150px;
+  height: calc(100vh - 3rem);
+  row-gap: 1rem;
+}
+
+.aboutContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.title h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: #131a17;
+}
+
+.aboutText {
+  font-size: 2rem;
+  text-align: left;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  margin-top: -5%;
+  margin-right: 10%;
+}
+
+.aboutEducation {
+  font-size: 2rem;
+  text-align: left;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 100;
+
+  justify-self: start;
+  align-self: flex-end;
+}
+.list {
+  margin-top: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+}
+@media screen and (max-width: 900px) {
+  .aboutContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px; /* Adjust the gap as needed */
+  }
+
+  .title h2 {
+    font-size: 3rem;
+    text-align: center;
+    color: #131a17;
+  }
+
+  .aboutText {
+    font-size: 2rem;
+    text-align: left;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    margin-top: 10%;
+    margin-right: 10%;
+  }
+
+  .aboutEducation {
+    font-size: 2rem;
+    text-align: left;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    margin-top: 5%;
+    margin-right: 35%;
+    margin-left: 10%;
+  }
+}
+@media screen and (max-width: 500px) and (max-height: 800px) {
+  .aboutContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0px;
+  }
+
+  .title h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #131a17;
+  }
+
+  .aboutText {
+    font-size: 1rem;
+    text-align: left;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    margin-top: 0;
+    margin-bottom: 20%;
+    margin-right: 10%;
+  }
+
+  .aboutEducation {
+    font-size: 1rem;
+    text-align: left;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: 100;
+
+    justify-self: start;
+    align-self: flex-start;
+  }
+
+  .list {
+    list-style: none;
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: center;
+    margin-right: 10%;
+  }
+}
